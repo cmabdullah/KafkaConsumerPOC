@@ -9,13 +9,14 @@ version = "0.1"
 group = "org.cm"
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
-    implementation("io.micronaut.kafka:micronaut-kafka")
+    implementation("io.micronaut.kafka:micronaut-kafka:5.7.1-SNAPSHOT-CM-V18")
     implementation("io.micronaut.serde:micronaut-serde-jackson")
     compileOnly("io.micronaut:micronaut-http-client")
     runtimeOnly("ch.qos.logback:logback-classic")
